@@ -4,11 +4,6 @@
 .idea/
 classes/
 
-.project
-.checkstyle
-.classpath
-*.prefs
-
 out/
 bin/
 
