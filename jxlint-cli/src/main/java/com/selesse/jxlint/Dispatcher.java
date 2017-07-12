@@ -1,9 +1,11 @@
 package com.selesse.jxlint;
 
 import com.google.common.annotations.VisibleForTesting;
-import com.selesse.jxlint.actions.JettyWebRunner;
+import com.selesse.jxlint.actions.web.JettyWebRunner;
+import com.selesse.jxlint.cli.CommandLineOptions;
 import com.selesse.jxlint.model.AbstractDispatcher;
 import com.selesse.jxlint.model.ExitException;
+import com.selesse.jxlint.model.JxlintOption;
 import com.selesse.jxlint.model.ProgramOptions;
 import com.selesse.jxlint.settings.ProgramSettings;
 
@@ -28,8 +30,20 @@ class Dispatcher extends AbstractDispatcher {
     }
 
     @Override
+    protected String createHelpMessage(ProgramSettings settings) {
+        return CommandLineOptions.getHelpMessage(settings);
+    }
+
+    @Override
+    protected void startWebServer() {
+        String port = programOptions.getOption(JxlintOption.WEB);
+
+        JettyWebRunner jettyWebRunner = getJettyWebRunner(port);
+        jettyWebRunner.start();
+    }
+
     @VisibleForTesting
-    protected JettyWebRunner getJettyWebRunner(String port) {
-        return super.getJettyWebRunner(port);
+    JettyWebRunner getJettyWebRunner(String port) {
+        return new JettyWebRunner(programSettings, port);
     }
 }

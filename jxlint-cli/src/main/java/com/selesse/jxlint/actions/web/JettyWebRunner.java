@@ -1,4 +1,4 @@
-package com.selesse.jxlint.actions;
+package com.selesse.jxlint.actions.web;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.io.Resources;

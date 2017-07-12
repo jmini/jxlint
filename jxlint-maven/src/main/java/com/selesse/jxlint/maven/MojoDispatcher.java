@@ -21,4 +21,13 @@ public class MojoDispatcher extends AbstractDispatcher {
             throw new MojoExecutionException(e.getMessage());
         }
     }
+
+    @Override
+    protected String createHelpMessage(ProgramSettings settings) {
+        return "";
+    }
+
+    @Override
+    protected void startWebServer() {
+    }
 }
