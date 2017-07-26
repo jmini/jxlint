@@ -1,7 +1,6 @@
 package com.selesse.jxlint.actions.web;
 
 import com.google.common.collect.Maps;
-import com.selesse.jxlint.actions.web.JettyWebRunner;
 import com.selesse.jxlint.cli.ProgramOptionExtractor;
 import com.selesse.jxlint.model.rules.LintRule;
 import com.selesse.jxlint.model.rules.LintRulesImpl;
