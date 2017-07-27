@@ -43,7 +43,7 @@ public class LintHandler {
      * {@link com.selesse.jxlint.ProgramExitter}, if exitAfterReport is true. The
      * {@link com.selesse.jxlint.report.Reporter} created is based on the
      * {@link com.selesse.jxlint.model.ProgramOptions} passed in the constructor.
-     * 
+     *
      * @throws ExitException
      */
     public void lintAndReportAndExit(boolean exitAfterReport) throws ExitException {

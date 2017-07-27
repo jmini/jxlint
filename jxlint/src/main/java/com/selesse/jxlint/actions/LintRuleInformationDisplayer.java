@@ -27,7 +27,7 @@ public class LintRuleInformationDisplayer {
      *     "Lint Rule 1" : This rule looks at source code.
      *     "Lint Rule 2" : This rule looks at source code comments.
      * </pre>
-     * 
+     *
      * @throws ExitException
      */
     public static void listRules() throws ExitException {
@@ -47,7 +47,7 @@ public class LintRuleInformationDisplayer {
     /**
      * List the {@link LintRule}s, in detailed form. Uses
      * {@link com.selesse.jxlint.model.rules.LintRule#getDetailedOutput()} to print individual rules.
-     * 
+     *
      * @throws ExitException
      */
     public static void showRules(ProgramOptions programOptions) throws ExitException {
