@@ -87,7 +87,7 @@ public class CommandLineOptions {
                 withArgName("filename").
                 create('x')
         );
-        outputOptionGroup.addOption(OptionBuilder.withLongOpt("xml-jenkins").
+        outputOptionGroup.addOption(OptionBuilder.withLongOpt("jenkins-xml").
                 withDescription("Create an XML Jenkins format (!!) report.").
                 hasOptionalArg().
                 withArgName("filename").

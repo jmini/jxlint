@@ -43,8 +43,9 @@ class JenkinsXmlReporter extends Reporter {
                 "    <message>" + xmlEncode(error.getMessage()) + "</message>",
                 "    <category>" + xmlEncode(violatedRule.getCategory().toString()) + "</category>",
                 "    <type>" + xmlEncode(violatedRule.getSummary()) + "</type>",
-                "    <description>" + xmlEncode(violatedRule.getDetailedDescription()) + "</description>",
-                "    <file>" + xmlEncode(error.getFile().getAbsolutePath()) + "</file>"
+                "    <description>" + xmlEncode(HtmlTemplateHelper.markdownToHtml(
+                        violatedRule.getDetailedDescription())) + "</description>",
+                "    <fileName>" + xmlEncode(error.getFile().getAbsolutePath()) + "</fileName>"
         );
         if (error.getLineNumber() > 0) {
             outputBuffer.add("    <lineStart>" + error.getLineNumber() + "</lineStart>");
